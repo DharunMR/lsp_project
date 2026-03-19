@@ -1,63 +1,69 @@
 import re
 
 class Symbol:
-    def __init__(self, name, kind, line, col, signature="()"):
+    def __init__(self, name, kind, line, col):
         self.name = name
-        self.kind = kind  # 'variable', 'subroutine', 'function', 'program'
+        self.kind = kind  # 'program', 'subroutine', 'variable', 'keyword'
         self.line = line
         self.col = col
-        self.signature = signature # Useful for signature help
 
-class FortranDocument:
+class FortranFile:
     def __init__(self, uri, text):
         self.uri = uri
         self.text = text
         self.symbols = []
-        self.diagnostics = []
-        self.refresh()
+        self.parse()
 
-    def refresh(self):
+    def parse(self):
+        """Simple symbolic parser to populate the symbols list."""
         self.symbols = []
-        self.diagnostics = []
         lines = self.text.splitlines()
-        
-        # Regex definitions
-        proc_re = re.compile(r'^\s*(SUBROUTINE|FUNCTION|PROGRAM)\s+([a-zA-Z]\w*)\s*(\(.*\))?', re.I)
-        var_re = re.compile(r'\b(INTEGER|REAL|COMPLEX|LOGICAL|CHARACTER|TYPE)\b.*::\s*([a-zA-Z]\w*)', re.I)
-        
-        has_implicit_none = False
+
+        # 1. Define Regex Patterns
+        patterns = {
+            'program': r'^\s*PROGRAM\s+(\w+)',
+            'subroutine': r'^\s*SUBROUTINE\s+(\w+)',
+            'variable': r'^\s*(?:INTEGER|REAL|COMPLEX|LOGICAL|CHARACTER).*?::\s*(\w+)',
+            'keyword': r'\b(IF|THEN|ELSE|END|PROGRAM|SUBROUTINE|INTEGER|REAL|DO|WHILE|RETURN)\b'
+        }
 
         for i, line in enumerate(lines):
-            clean = line.split('!')[0] # Strip comments
-            
-            if "implicit none" in clean.lower():
-                has_implicit_none = True
+            # Check for structural blocks (Program/Subroutine)
+            for kind in ['program', 'subroutine']:
+                match = re.search(patterns[kind], line, re.IGNORECASE)
+                if match:
+                    self.symbols.append(Symbol(match.group(1), kind, i, match.start(1)))
 
-            # Extract Procedures
-            if m := proc_re.search(clean):
-                sig = m.group(3) if m.group(3) else "()"
-                self.symbols.append(Symbol(m.group(2), m.group(1).lower(), i, clean.find(m.group(2)), sig))
-            
-            # Extract Variables
-            elif m := var_re.search(clean):
-                name = m.group(2)
-                self.symbols.append(Symbol(name, 'variable', i, clean.find(name)))
+            # Check for Variable Declarations (INTEGER :: jk)
+            var_match = re.search(patterns['variable'], line, re.IGNORECASE)
+            if var_match:
+                self.symbols.append(Symbol(var_match.group(1), 'variable', i, var_match.start(1)))
 
-        # Diagnostics: Enforce Implicit None
-        if not has_implicit_none and len(lines) > 0:
-            self.diagnostics.append({
-                "range": {"start": {"line": 0, "character": 0}, "end": {"line": 0, "character": 10}},
-                "message": "Best Practice: Missing 'implicit none' statement.",
-                "severity": 2 # 1=Error, 2=Warning, 3=Information
-            })
+            # Check for Keywords (to fix the "white text" problem)
+            # We find all keywords and add them as symbols so semantic.py can color them
+            for kw_match in re.finditer(patterns['keyword'], line, re.IGNORECASE):
+                # We only add it if it's not already part of a structural match
+                self.symbols.append(Symbol(kw_match.group(0), 'keyword', i, kw_match.start()))
+
+            # Catch usage of variables (very basic logic)
+            # This finds 'jk' or 'fghj' when used in assignments or IF statements
+            words = re.finditer(r'\b[a-zA-Z_]\w*\b', line)
+            for w in words:
+                name = w.group(0)
+                # If it's not a keyword and not already found, treat it as a variable usage
+                if not re.match(patterns['keyword'], name, re.IGNORECASE):
+                    # Only add if not already in symbols for this line
+                    if not any(s.line == i and s.col == w.start() for s in self.symbols):
+                        self.symbols.append(Symbol(name, 'variable', i, w.start()))
 
 class WorkspaceManager:
     def __init__(self):
-        self.docs = {}
+        self.documents = {}
 
     def update(self, uri, text):
-        self.docs[uri] = FortranDocument(uri, text)
-        return self.docs[uri].diagnostics
+        self.documents[uri] = FortranFile(uri, text)
+        # Here you could add diagnostic logic (syntax errors)
+        return [] 
 
     def get(self, uri):
-        return self.docs.get(uri)
+        return self.documents.get(uri)
