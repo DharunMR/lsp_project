@@ -30,6 +30,14 @@ class FortranRegularExpressions:
     SUB_MOD: Pattern = compile(
         r"[ ]*(?!<[,\()][ ]*)\b(PURE|IMPURE|ELEMENTAL|RECURSIVE)\b(?![,\)][ ]*)", I
     )
+
+    CTX_USE: Pattern = compile(r"USE(?:,[\w ]+)?[\s:]+(\w*)$", I)
+    CTX_CALL: Pattern = compile(r"CALL[\s]+[\w%]*$", I)    
+    CTX_TYPE: Pattern = compile(r"(?:TYPE|CLASS)[\s]*\([\s]*(\w*)$", I)
+    CTX_MEMBER: Pattern = compile(r"([\w%]+)%(\w*)$", I)
+    CTX_USE_ONLY: Pattern = compile(r"USE.*?ONLY[\s:]+(\w*)$", I)
+    CTX_WORD: Pattern = compile(r"(\w+)$", I)
+
     SUB: Pattern = compile(r"[ ]*SUBROUTINE[ ]+(\w+)", I)
     END_SUB: Pattern = compile(r"SUBROUTINE", I)
     FUN: Pattern = compile(r"[ ]*FUNCTION[ ]+(\w+)", I)

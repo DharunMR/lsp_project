@@ -28,11 +28,9 @@ def get_definition(file_obj, line, char):
     return None
 
 def get_signature_help(file_obj, line, char):
-    """Triggers when typing '(' to show arguments."""
     lines = file_obj.text.splitlines()
     if line >= len(lines): return None
     
-    # Look backwards from the cursor to find the function name
     text_before_cursor = lines[line][:char]
     match = re.search(r'\b(\w+)\s*\(.*$', text_before_cursor)
     
@@ -47,6 +45,6 @@ def get_signature_help(file_obj, line, char):
                         "parameters": [{"label": param.strip()} for param in s.signature.strip("()").split(",") if param]
                     }],
                     "activeSignature": 0,
-                    "activeParameter": text_before_cursor.count(',') # Guess active parameter based on commas
+                    "activeParameter": text_before_cursor.count(',')
                 }
     return None

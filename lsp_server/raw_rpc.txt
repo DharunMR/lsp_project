@@ -1,1897 +1,1401 @@
-=== NEW LSP SESSION STARTED ===
+=== PRETTIFIED LSP SESSION ===
 
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
 Content-Length: 5744
 
-{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":60271,"clientInfo":{"name":"Code - OSS","version":"1.111.0"},"locale":"en","rootPath":null,"rootUri":null,"capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional","normalizesLineEndings":true,"changeAnnotationSupport":{"groupsOnLabel":true}},"configuration":true,"didChangeWatchedFiles":{"dynamicRegistration":true,"relativePatternSupport":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"tagSupport":{"valueSet":[1]},"resolveSupport":{"properties":["location.range"]}},"codeLens":{"refreshSupport":true},"executeCommand":{"dynamicRegistration":true},"didChangeConfiguration":{"dynamicRegistration":true},"workspaceFolders":true,"foldingRange":{"refreshSupport":true},"semanticTokens":{"refreshSupport":true},"fileOperations":{"dynamicRegistration":true,"didCreate":true,"didRename":true,"didDelete":true,"willCreate":true,"willRename":true,"willDelete":true},"inlineValue":{"refreshSupport":true},"inlayHint":{"refreshSupport":true},"diagnostics":{"refreshSupport":true}},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]},"codeDescriptionSupport":true,"dataSupport":true},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]},"insertReplaceSupport":true,"resolveSupport":{"properties":["documentation","detail","additionalTextEdits"]},"insertTextModeSupport":{"valueSet":[1,2]},"labelDetailsSupport":true},"insertTextMode":2,"completionItemKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]},"completionList":{"itemDefaults":["commitCharacters","editRange","insertTextFormat","insertTextMode","data"]}},"hover":{"dynamicRegistration":true,"contentFormat":["markdown","plaintext"]},"signatureHelp":{"dynamicRegistration":true,"signatureInformation":{"documentationFormat":["markdown","plaintext"],"parameterInformation":{"labelOffsetSupport":true},"activeParameterSupport":true},"contextSupport":true},"definition":{"dynamicRegistration":true,"linkSupport":true},"references":{"dynamicRegistration":true},"documentHighlight":{"dynamicRegistration":true},"documentSymbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"hierarchicalDocumentSymbolSupport":true,"tagSupport":{"valueSet":[1]},"labelSupport":true},"codeAction":{"dynamicRegistration":true,"isPreferredSupport":true,"disabledSupport":true,"dataSupport":true,"resolveSupport":{"properties":["edit"]},"codeActionLiteralSupport":{"codeActionKind":{"valueSet":["","quickfix","refactor","refactor.extract","refactor.inline","refactor.rewrite","source","source.organizeImports"]}},"honorsChangeAnnotations":true},"codeLens":{"dynamicRegistration":true},"formatting":{"dynamicRegistration":true},"rangeFormatting":{"dynamicRegistration":true,"rangesSupport":true},"onTypeFormatting":{"dynamicRegistration":true},"rename":{"dynamicRegistration":true,"prepareSupport":true,"prepareSupportDefaultBehavior":1,"honorsChangeAnnotations":true},"documentLink":{"dynamicRegistration":true,"tooltipSupport":true},"typeDefinition":{"dynamicRegistration":true,"linkSupport":true},"implementation":{"dynamicRegistration":true,"linkSupport":true},"colorProvider":{"dynamicRegistration":true},"foldingRange":{"dynamicRegistration":true,"rangeLimit":5000,"lineFoldingOnly":true,"foldingRangeKind":{"valueSet":["comment","imports","region"]},"foldingRange":{"collapsedText":false}},"declaration":{"dynamicRegistration":true,"linkSupport":true},"selectionRange":{"dynamicRegistration":true},"callHierarchy":{"dynamicRegistration":true},"semanticTokens":{"dynamicRegistration":true,"tokenTypes":["namespace","type","class","enum","interface","struct","typeParameter","parameter","variable","property","enumMember","event","function","method","macro","keyword","modifier","comment","string","number","regexp","operator","decorator"],"tokenModifiers":["declaration","definition","readonly","static","deprecated","abstract","async","modification","documentation","defaultLibrary"],"formats":["relative"],"requests":{"range":true,"full":{"delta":true}},"multilineTokenSupport":false,"overlappingTokenSupport":false,"serverCancelSupport":true,"augmentsSyntaxTokens":true},"linkedEditingRange":{"dynamicRegistration":true},"typeHierarchy":{"dynamicRegistration":true},"inlineValue":{"dynamicRegistration":true},"inlayHint":{"dynamicRegistration":true,"resolveSupport":{"properties":["tooltip","textEdits","label.tooltip","label.location","label.command"]}},"diagnostic":{"dynamicRegistration":true,"relatedDocumentSupport":false}},"window":{"showMessage":{"messageActionItem":{"additionalPropertiesSupport":true}},"showDocument":{"support":true},"workDoneProgress":true},"general":{"staleRequestSupport":{"cancel":true,"retryOnContentModified":["textDocument/semanticTokens/full","textDocument/semanticTokens/range","textDocument/semanticTokens/full/delta"]},"regularExpressions":{"engine":"ECMAScript","version":"ES2020"},"markdown":{"parser":"marked","version":"1.1.0"},"positionEncodings":["utf-16"]},"notebookDocument":{"synchronization":{"dynamicRegistration":true,"executionSummarySupport":true}}},"trace":"off","workspaceFolders":null}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 0,
+    "method": "initialize",
+    "params": {
+        "processId": 77493,
+        "clientInfo": {
+            "name": "Code - OSS",
+            "version": "1.111.0"
+        },
+        "locale": "en",
+        "rootPath": null,
+        "rootUri": null,
+        "capabilities": {
+            "workspace": {
+                "applyEdit": true,
+                "workspaceEdit": {
+                    "documentChanges": true,
+                    "resourceOperations": [
+                        "create",
+                        "rename",
+                        "delete"
+                    ],
+                    "failureHandling": "textOnlyTransactional",
+                    "normalizesLineEndings": true,
+                    "changeAnnotationSupport": {
+                        "groupsOnLabel": true
+                    }
+                },
+                "configuration": true,
+                "didChangeWatchedFiles": {
+                    "dynamicRegistration": true,
+                    "relativePatternSupport": true
+                },
+                "symbol": {
+                    "dynamicRegistration": true,
+                    "symbolKind": {
+                        "valueSet": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25,
+                            26
+                        ]
+                    },
+                    "tagSupport": {
+                        "valueSet": [
+                            1
+                        ]
+                    },
+                    "resolveSupport": {
+                        "properties": [
+                            "location.range"
+                        ]
+                    }
+                },
+                "codeLens": {
+                    "refreshSupport": true
+                },
+                "executeCommand": {
+                    "dynamicRegistration": true
+                },
+                "didChangeConfiguration": {
+                    "dynamicRegistration": true
+                },
+                "workspaceFolders": true,
+                "foldingRange": {
+                    "refreshSupport": true
+                },
+                "semanticTokens": {
+                    "refreshSupport": true
+                },
+                "fileOperations": {
+                    "dynamicRegistration": true,
+                    "didCreate": true,
+                    "didRename": true,
+                    "didDelete": true,
+                    "willCreate": true,
+                    "willRename": true,
+                    "willDelete": true
+                },
+                "inlineValue": {
+                    "refreshSupport": true
+                },
+                "inlayHint": {
+                    "refreshSupport": true
+                },
+                "diagnostics": {
+                    "refreshSupport": true
+                }
+            },
+            "textDocument": {
+                "publishDiagnostics": {
+                    "relatedInformation": true,
+                    "versionSupport": false,
+                    "tagSupport": {
+                        "valueSet": [
+                            1,
+                            2
+                        ]
+                    },
+                    "codeDescriptionSupport": true,
+                    "dataSupport": true
+                },
+                "synchronization": {
+                    "dynamicRegistration": true,
+                    "willSave": true,
+                    "willSaveWaitUntil": true,
+                    "didSave": true
+                },
+                "completion": {
+                    "dynamicRegistration": true,
+                    "contextSupport": true,
+                    "completionItem": {
+                        "snippetSupport": true,
+                        "commitCharactersSupport": true,
+                        "documentationFormat": [
+                            "markdown",
+                            "plaintext"
+                        ],
+                        "deprecatedSupport": true,
+                        "preselectSupport": true,
+                        "tagSupport": {
+                            "valueSet": [
+                                1
+                            ]
+                        },
+                        "insertReplaceSupport": true,
+                        "resolveSupport": {
+                            "properties": [
+                                "documentation",
+                                "detail",
+                                "additionalTextEdits"
+                            ]
+                        },
+                        "insertTextModeSupport": {
+                            "valueSet": [
+                                1,
+                                2
+                            ]
+                        },
+                        "labelDetailsSupport": true
+                    },
+                    "insertTextMode": 2,
+                    "completionItemKind": {
+                        "valueSet": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25
+                        ]
+                    },
+                    "completionList": {
+                        "itemDefaults": [
+                            "commitCharacters",
+                            "editRange",
+                            "insertTextFormat",
+                            "insertTextMode",
+                            "data"
+                        ]
+                    }
+                },
+                "hover": {
+                    "dynamicRegistration": true,
+                    "contentFormat": [
+                        "markdown",
+                        "plaintext"
+                    ]
+                },
+                "signatureHelp": {
+                    "dynamicRegistration": true,
+                    "signatureInformation": {
+                        "documentationFormat": [
+                            "markdown",
+                            "plaintext"
+                        ],
+                        "parameterInformation": {
+                            "labelOffsetSupport": true
+                        },
+                        "activeParameterSupport": true
+                    },
+                    "contextSupport": true
+                },
+                "definition": {
+                    "dynamicRegistration": true,
+                    "linkSupport": true
+                },
+                "references": {
+                    "dynamicRegistration": true
+                },
+                "documentHighlight": {
+                    "dynamicRegistration": true
+                },
+                "documentSymbol": {
+                    "dynamicRegistration": true,
+                    "symbolKind": {
+                        "valueSet": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25,
+                            26
+                        ]
+                    },
+                    "hierarchicalDocumentSymbolSupport": true,
+                    "tagSupport": {
+                        "valueSet": [
+                            1
+                        ]
+                    },
+                    "labelSupport": true
+                },
+                "codeAction": {
+                    "dynamicRegistration": true,
+                    "isPreferredSupport": true,
+                    "disabledSupport": true,
+                    "dataSupport": true,
+                    "resolveSupport": {
+                        "properties": [
+                            "edit"
+                        ]
+                    },
+                    "codeActionLiteralSupport": {
+                        "codeActionKind": {
+                            "valueSet": [
+                                "",
+                                "quickfix",
+                                "refactor",
+                                "refactor.extract",
+                                "refactor.inline",
+                                "refactor.rewrite",
+                                "source",
+                                "source.organizeImports"
+                            ]
+                        }
+                    },
+                    "honorsChangeAnnotations": true
+                },
+                "codeLens": {
+                    "dynamicRegistration": true
+                },
+                "formatting": {
+                    "dynamicRegistration": true
+                },
+                "rangeFormatting": {
+                    "dynamicRegistration": true,
+                    "rangesSupport": true
+                },
+                "onTypeFormatting": {
+                    "dynamicRegistration": true
+                },
+                "rename": {
+                    "dynamicRegistration": true,
+                    "prepareSupport": true,
+                    "prepareSupportDefaultBehavior": 1,
+                    "honorsChangeAnnotations": true
+                },
+                "documentLink": {
+                    "dynamicRegistration": true,
+                    "tooltipSupport": true
+                },
+                "typeDefinition": {
+                    "dynamicRegistration": true,
+                    "linkSupport": true
+                },
+                "implementation": {
+                    "dynamicRegistration": true,
+                    "linkSupport": true
+                },
+                "colorProvider": {
+                    "dynamicRegistration": true
+                },
+                "foldingRange": {
+                    "dynamicRegistration": true,
+                    "rangeLimit": 5000,
+                    "lineFoldingOnly": true,
+                    "foldingRangeKind": {
+                        "valueSet": [
+                            "comment",
+                            "imports",
+                            "region"
+                        ]
+                    },
+                    "foldingRange": {
+                        "collapsedText": false
+                    }
+                },
+                "declaration": {
+                    "dynamicRegistration": true,
+                    "linkSupport": true
+                },
+                "selectionRange": {
+                    "dynamicRegistration": true
+                },
+                "callHierarchy": {
+                    "dynamicRegistration": true
+                },
+                "semanticTokens": {
+                    "dynamicRegistration": true,
+                    "tokenTypes": [
+                        "namespace",
+                        "type",
+                        "class",
+                        "enum",
+                        "interface",
+                        "struct",
+                        "typeParameter",
+                        "parameter",
+                        "variable",
+                        "property",
+                        "enumMember",
+                        "event",
+                        "function",
+                        "method",
+                        "macro",
+                        "keyword",
+                        "modifier",
+                        "comment",
+                        "string",
+                        "number",
+                        "regexp",
+                        "operator",
+                        "decorator"
+                    ],
+                    "tokenModifiers": [
+                        "declaration",
+                        "definition",
+                        "readonly",
+                        "static",
+                        "deprecated",
+                        "abstract",
+                        "async",
+                        "modification",
+                        "documentation",
+                        "defaultLibrary"
+                    ],
+                    "formats": [
+                        "relative"
+                    ],
+                    "requests": {
+                        "range": true,
+                        "full": {
+                            "delta": true
+                        }
+                    },
+                    "multilineTokenSupport": false,
+                    "overlappingTokenSupport": false,
+                    "serverCancelSupport": true,
+                    "augmentsSyntaxTokens": true
+                },
+                "linkedEditingRange": {
+                    "dynamicRegistration": true
+                },
+                "typeHierarchy": {
+                    "dynamicRegistration": true
+                },
+                "inlineValue": {
+                    "dynamicRegistration": true
+                },
+                "inlayHint": {
+                    "dynamicRegistration": true,
+                    "resolveSupport": {
+                        "properties": [
+                            "tooltip",
+                            "textEdits",
+                            "label.tooltip",
+                            "label.location",
+                            "label.command"
+                        ]
+                    }
+                },
+                "diagnostic": {
+                    "dynamicRegistration": true,
+                    "relatedDocumentSupport": false
+                }
+            },
+            "window": {
+                "showMessage": {
+                    "messageActionItem": {
+                        "additionalPropertiesSupport": true
+                    }
+                },
+                "showDocument": {
+                    "support": true
+                },
+                "workDoneProgress": true
+            },
+            "general": {
+                "staleRequestSupport": {
+                    "cancel": true,
+                    "retryOnContentModified": [
+                        "textDocument/semanticTokens/full",
+                        "textDocument/semanticTokens/range",
+                        "textDocument/semanticTokens/full/delta"
+                    ]
+                },
+                "regularExpressions": {
+                    "engine": "ECMAScript",
+                    "version": "ES2020"
+                },
+                "markdown": {
+                    "parser": "marked",
+                    "version": "1.1.0"
+                },
+                "positionEncodings": [
+                    "utf-16"
+                ]
+            },
+            "notebookDocument": {
+                "synchronization": {
+                    "dynamicRegistration": true,
+                    "executionSummarySupport": true
+                }
+            }
+        },
+        "trace": "off",
+        "workspaceFolders": null
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
+>>> SENT TO IDE >>>
 Content-Length: 475
 
-{"id":0,"result":{"capabilities":{"textDocumentSync":1,"completionProvider":{"triggerCharacters":[" ","."]},"hoverProvider":true,"definitionProvider":true,"declarationProvider":true,"signatureHelpProvider":{"triggerCharacters":["("]},"codeLensProvider":{"resolveProvider":false},"foldingRangeProvider":true,"documentHighlightProvider":true,"semanticTokensProvider":{"legend":{"tokenTypes":["variable","function","keyword"],"tokenModifiers":[]},"full":true}}},"jsonrpc":"2.0"}
-========================================
+{
+    "id": 0,
+    "result": {
+        "capabilities": {
+            "textDocumentSync": 1,
+            "completionProvider": {
+                "triggerCharacters": [
+                    " ",
+                    "."
+                ]
+            },
+            "hoverProvider": true,
+            "definitionProvider": true,
+            "declarationProvider": true,
+            "signatureHelpProvider": {
+                "triggerCharacters": [
+                    "("
+                ]
+            },
+            "codeLensProvider": {
+                "resolveProvider": false
+            },
+            "foldingRangeProvider": true,
+            "documentHighlightProvider": true,
+            "semanticTokensProvider": {
+                "legend": {
+                    "tokenTypes": [
+                        "variable",
+                        "function",
+                        "keyword"
+                    ],
+                    "tokenModifiers": []
+                },
+                "full": true
+            }
+        }
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
 Content-Length: 52
 
-{"jsonrpc":"2.0","method":"initialized","params":{}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "initialized",
+    "params": {}
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
 Content-Length: 159
 
-{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","languageId":"plaintext","version":2,"text":"p"}}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didOpen",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt",
+            "languageId": "plaintext",
+            "version": 2,
+            "text": "f"
+        }
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
+>>> SENT TO IDE >>>
 Content-Length: 122
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "method": "textDocument/publishDiagnostics",
+    "params": {
+        "uri": "file:///home/dharun/j.txt",
+        "diagnostics": []
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 158
+<<< RECEIVED FROM IDE <<<
+Content-Length: 123
 
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":3},"contentChanges":[{"text":"pr"}]}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 122
+>>> SENT TO IDE >>>
+Content-Length: 36
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "id": 1,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 185
+<<< RECEIVED FROM IDE <<<
+Content-Length: 123
 
-{"jsonrpc":"2.0","id":1,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":2},"context":{"triggerKind":1}}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 2,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 841
+>>> SENT TO IDE >>>
+Content-Length: 36
 
-{"id":1,"result":{"isIncomplete":false,"items":[{"label":"pr","kind":6,"detail":"variable","insertText":"pr"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
+{
+    "id": 2,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
+Content-Length: 119
+
+{
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "textDocument/codeLens",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 36
+
+{
+    "id": 3,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
 Content-Length: 64
 
-{"jsonrpc":"2.0","method":"$/setTrace","params":{"value":"off"}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "$/setTrace",
+    "params": {
+        "value": "off"
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 159
+<<< RECEIVED FROM IDE <<<
+Content-Length: 156
 
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":4},"contentChanges":[{"text":"pro"}]}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didChange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt",
+            "version": 3
+        },
+        "contentChanges": [
+            {
+                "text": ""
+            }
+        ]
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
+>>> SENT TO IDE >>>
 Content-Length: 122
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "method": "textDocument/publishDiagnostics",
+    "params": {
+        "uri": "file:///home/dharun/j.txt",
+        "diagnostics": []
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
+Content-Length: 157
+
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didChange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt",
+            "version": 4
+        },
+        "contentChanges": [
+            {
+                "text": "p"
+            }
+        ]
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 122
+
+{
+    "method": "textDocument/publishDiagnostics",
+    "params": {
+        "uri": "file:///home/dharun/j.txt",
+        "diagnostics": []
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
 Content-Length: 185
 
-{"jsonrpc":"2.0","id":2,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":2,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":3,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":3,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":4,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":4,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":5,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":5,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":6,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":6,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":7,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":7,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":8,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":8,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 185
-
-{"jsonrpc":"2.0","id":9,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 843
-
-{"id":9,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":10,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":10,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":11,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":11,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":2}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":3}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":4}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":5}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":6}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":7}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":8}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 62
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":9}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":12,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":12,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":13,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":13,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":14,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":14,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":10}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":11}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":12}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":13}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":14}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":15,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":15,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":15}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":16,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":16,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":17,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 37
-
-{"id":17,"result":[],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":18,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 37
-
-{"id":18,"result":[],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":19,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":19,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":20,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":20,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":21,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 37
-
-{"id":21,"result":[],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":19}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":22,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 55
-
-{"id":22,"result":{"data":[0,0,3,0,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":23,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 37
-
-{"id":23,"result":[],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":24,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":24,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":25,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":25,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":26,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":26,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":27,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":0,"character":3},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 844
-
-{"id":27,"result":{"isIncomplete":false,"items":[{"label":"pro","kind":6,"detail":"variable","insertText":"pro"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":24}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":25}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":26}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":27}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 63
-
-{"jsonrpc":"2.0","method":"$/cancelRequest","params":{"id":23}}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 192
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":5},"contentChanges":[{"text":"PROGRAM main\n    \nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":28,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":28,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":29,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":29,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":30,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":30,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":31,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 95
-
-{"id":31,"result":{"data":[0,0,7,2,0,0,8,4,1,0,2,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 193
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":6},"contentChanges":[{"text":"PROGRAM main\n    i\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":32,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":5},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1175
-
-{"id":32,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"i","kind":6,"detail":"variable","insertText":"i"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 194
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":7},"contentChanges":[{"text":"PROGRAM main\n    in\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":33,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 105
-
-{"id":33,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,2,0,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":34,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":34,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":35,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":35,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":36,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":36,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 199
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":8},"contentChanges":[{"text":"PROGRAM main\n    INTEGER\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":37,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":37,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":38,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":38,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":39,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":39,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":40,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 105
-
-{"id":40,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 200
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":9},"contentChanges":[{"text":"PROGRAM main\n    INTEGER \nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 210
-
-{"jsonrpc":"2.0","id":41,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":12},"context":{"triggerKind":2,"triggerCharacter":" "}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1186
-
-{"id":41,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":42,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":42,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":43,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":43,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":44,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":44,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":45,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 105
-
-{"id":45,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 203
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":11},"contentChanges":[{"text":"PROGRAM main\n    INTEGER ::\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":46,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":46,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":47,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 105
-
-{"id":47,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 204
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":12},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: \nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 210
-
-{"jsonrpc":"2.0","id":48,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":15},"context":{"triggerKind":2,"triggerCharacter":" "}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1186
-
-{"id":48,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":49,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":49,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 205
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":13},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: l\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 187
-
-{"jsonrpc":"2.0","id":50,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":16},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1246
-
-{"id":50,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"l","kind":6,"detail":"variable","insertText":"l"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":51,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 116
-
-{"id":51,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,1,0,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 206
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":14},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lp\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 187
-
-{"jsonrpc":"2.0","id":52,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":17},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1248
-
-{"id":52,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lp","kind":6,"detail":"variable","insertText":"lp"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":53,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":53,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":54,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":54,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 207
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":15},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 187
-
-{"jsonrpc":"2.0","id":55,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":18},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1250
-
-{"id":55,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":56,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 116
-
-{"id":56,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":57,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":57,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":58,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":58,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":59,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":59,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 207
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":16},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":60,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":60,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":61,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":61,"result":[{"startLine":0,"endLine":1,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":62,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":62,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":63,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 116
-
-{"id":63,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 166
-
-{"jsonrpc":"2.0","id":64,"method":"textDocument/documentHighlight","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":18}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 123
-
-{"id":64,"result":[{"range":{"start":{"line":1,"character":15},"end":{"line":1,"character":18}},"kind":1}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":65,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":65,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 166
-
-{"jsonrpc":"2.0","id":66,"method":"textDocument/documentHighlight","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":1,"character":18}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 123
-
-{"id":66,"result":[{"range":{"start":{"line":1,"character":15},"end":{"line":1,"character":18}},"kind":1}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":67,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":67,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":2,"character":12},"end":{"line":2,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 215
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":18},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    \nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":68,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 116
-
-{"id":68,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,3,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":69,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":69,"result":[{"startLine":0,"endLine":3,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":70,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":70,"result":[{"startLine":0,"endLine":3,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":71,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":71,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":4,"character":12},"end":{"line":4,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 216
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":19},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    s\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":72,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":3,"character":5},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1310
-
-{"id":72,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"s","kind":6,"detail":"variable","insertText":"s"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 217
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":20},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    su\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":73,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":73,"result":[{"startLine":0,"endLine":3,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":74,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 80
-
-{"id":74,"result":[{"startLine":0,"endLine":3,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":75,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 351
-
-{"id":75,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":4,"character":12},"end":{"line":4,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":76,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 126
-
-{"id":76,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,2,0,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 267
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":21},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        \n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":77,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 124
-
-{"id":77,"result":[{"startLine":3,"endLine":4,"kind":"region"},{"startLine":0,"endLine":5,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":78,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 124
-
-{"id":78,"result":[{"startLine":3,"endLine":4,"kind":"region"},{"startLine":0,"endLine":5,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":79,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 791
-
-{"id":79,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":5,"character":19},"end":{"line":5,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":5,"character":19}]}},{"range":{"start":{"line":6,"character":12},"end":{"line":6,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":80,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 170
-
-{"id":80,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,2,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 268
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":22},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        i\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 186
-
-{"jsonrpc":"2.0","id":81,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":4,"character":9},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1667
-
-{"id":81,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"i","kind":6,"detail":"variable","insertText":"i"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 269
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":23},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        if\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":82,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 124
-
-{"id":82,"result":[{"startLine":3,"endLine":4,"kind":"region"},{"startLine":0,"endLine":5,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":83,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 124
-
-{"id":83,"result":[{"startLine":3,"endLine":4,"kind":"region"},{"startLine":0,"endLine":5,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":84,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 180
-
-{"id":84,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":85,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 791
-
-{"id":85,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":5,"character":19},"end":{"line":5,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":5,"character":19}]}},{"range":{"start":{"line":6,"character":12},"end":{"line":6,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 307
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":24},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            \n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":86,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 168
-
-{"id":86,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":87,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 168
-
-{"id":87,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 120
-
-{"jsonrpc":"2.0","id":88,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 791
-
-{"id":88,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":7,"character":19},"end":{"line":7,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":7,"character":19}]}},{"range":{"start":{"line":8,"character":12},"end":{"line":8,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 131
-
-{"jsonrpc":"2.0","id":89,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 210
-
-{"id":89,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,2,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
+{
+    "jsonrpc": "2.0",
+    "id": 4,
+    "method": "textDocument/completion",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        },
+        "position": {
+            "line": 0,
+            "character": 1
+        },
+        "context": {
+            "triggerKind": 1
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
 Content-Length: 308
 
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":25},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            t\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
+{
+    "id": 4,
+    "result": {
+        "isIncomplete": false,
+        "items": [
+            {
+                "label": "p",
+                "kind": 6,
+                "detail": "variable",
+                "insertText": "p"
+            },
+            {
+                "label": "PROGRAM",
+                "kind": 15,
+                "detail": "Snippet: Program Block",
+                "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+                "insertTextFormat": 2,
+                "doc": "Main entry point template."
+            }
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 122
+<<< RECEIVED FROM IDE <<<
+Content-Length: 130
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 5,
+    "method": "textDocument/semanticTokens/full",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 187
+>>> SENT TO IDE >>>
+Content-Length: 54
 
-{"jsonrpc":"2.0","id":90,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":5,"character":13},"context":{"triggerKind":1}}}
-========================================
+{
+    "id": 5,
+    "result": {
+        "data": [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 1917
+<<< RECEIVED FROM IDE <<<
+Content-Length: 123
 
-{"id":90,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"THEN","kind":3,"detail":"keyword","insertText":"THEN"},{"label":"t","kind":6,"detail":"variable","insertText":"t"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 6,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
+>>> SENT TO IDE >>>
+Content-Length: 36
+
+{
+    "id": 6,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 62
+
+{
+    "jsonrpc": "2.0",
+    "method": "$/cancelRequest",
+    "params": {
+        "id": 6
+    }
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 123
+
+{
+    "jsonrpc": "2.0",
+    "id": 7,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 36
+
+{
+    "id": 7,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 123
+
+{
+    "jsonrpc": "2.0",
+    "id": 8,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 36
+
+{
+    "id": 8,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 119
+
+{
+    "jsonrpc": "2.0",
+    "id": 9,
+    "method": "textDocument/codeLens",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 36
+
+{
+    "id": 9,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 186
+
+{
+    "jsonrpc": "2.0",
+    "id": 10,
+    "method": "textDocument/completion",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        },
+        "position": {
+            "line": 0,
+            "character": 1
+        },
+        "context": {
+            "triggerKind": 1
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
 Content-Length: 309
 
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":26},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            tr\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
+{
+    "id": 10,
+    "result": {
+        "isIncomplete": false,
+        "items": [
+            {
+                "label": "p",
+                "kind": 6,
+                "detail": "variable",
+                "insertText": "p"
+            },
+            {
+                "label": "PROGRAM",
+                "kind": 15,
+                "detail": "Snippet: Program Block",
+                "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+                "insertTextFormat": 2,
+                "doc": "Main entry point template."
+            }
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 122
+<<< RECEIVED FROM IDE <<<
+Content-Length: 186
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 11,
+    "method": "textDocument/completion",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        },
+        "position": {
+            "line": 0,
+            "character": 1
+        },
+        "context": {
+            "triggerKind": 1
+        }
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 187
+>>> SENT TO IDE >>>
+Content-Length: 309
 
-{"jsonrpc":"2.0","id":91,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":5,"character":14},"context":{"triggerKind":1}}}
-========================================
+{
+    "id": 11,
+    "result": {
+        "isIncomplete": false,
+        "items": [
+            {
+                "label": "p",
+                "kind": 6,
+                "detail": "variable",
+                "insertText": "p"
+            },
+            {
+                "label": "PROGRAM",
+                "kind": 15,
+                "detail": "Snippet: Program Block",
+                "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+                "insertTextFormat": 2,
+                "doc": "Main entry point template."
+            }
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 1919
+<<< RECEIVED FROM IDE <<<
+Content-Length: 186
 
-{"id":91,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"THEN","kind":3,"detail":"keyword","insertText":"THEN"},{"label":"tr","kind":6,"detail":"variable","insertText":"tr"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 12,
+    "method": "textDocument/completion",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        },
+        "position": {
+            "line": 0,
+            "character": 1
+        },
+        "context": {
+            "triggerKind": 1
+        }
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 131
+>>> SENT TO IDE >>>
+Content-Length: 309
 
-{"jsonrpc":"2.0","id":92,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
+{
+    "id": 12,
+    "result": {
+        "isIncomplete": false,
+        "items": [
+            {
+                "label": "p",
+                "kind": 6,
+                "detail": "variable",
+                "insertText": "p"
+            },
+            {
+                "label": "PROGRAM",
+                "kind": 15,
+                "detail": "Snippet: Program Block",
+                "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+                "insertTextFormat": 2,
+                "doc": "Main entry point template."
+            }
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 221
+<<< RECEIVED FROM IDE <<<
+Content-Length: 186
 
-{"id":92,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,2,0,0,1,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 13,
+    "method": "textDocument/completion",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        },
+        "position": {
+            "line": 0,
+            "character": 1
+        },
+        "context": {
+            "triggerKind": 1
+        }
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 124
+>>> SENT TO IDE >>>
+Content-Length: 309
 
-{"jsonrpc":"2.0","id":93,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
+{
+    "id": 13,
+    "result": {
+        "isIncomplete": false,
+        "items": [
+            {
+                "label": "p",
+                "kind": 6,
+                "detail": "variable",
+                "insertText": "p"
+            },
+            {
+                "label": "PROGRAM",
+                "kind": 15,
+                "detail": "Snippet: Program Block",
+                "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+                "insertTextFormat": 2,
+                "doc": "Main entry point template."
+            }
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 168
+<<< RECEIVED FROM IDE <<<
+Content-Length: 62
 
-{"id":93,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "$/cancelRequest",
+    "params": {
+        "id": 9
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 310
+<<< RECEIVED FROM IDE <<<
+Content-Length: 63
 
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":27},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            tru\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "$/cancelRequest",
+    "params": {
+        "id": 10
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 122
+<<< RECEIVED FROM IDE <<<
+Content-Length: 63
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "$/cancelRequest",
+    "params": {
+        "id": 11
+    }
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 187
+<<< RECEIVED FROM IDE <<<
+Content-Length: 63
 
-{"jsonrpc":"2.0","id":94,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":5,"character":15},"context":{"triggerKind":1}}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "$/cancelRequest",
+    "params": {
+        "id": 12
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 1921
-
-{"id":94,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"THEN","kind":3,"detail":"keyword","insertText":"THEN"},{"label":"tru","kind":6,"detail":"variable","insertText":"tru"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":95,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 168
-
-{"id":95,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 311
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":28},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            true\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 187
-
-{"jsonrpc":"2.0","id":96,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":5,"character":16},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1923
-
-{"id":96,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"THEN","kind":3,"detail":"keyword","insertText":"THEN"},{"label":"true","kind":6,"detail":"variable","insertText":"true"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":97,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 168
-
-{"id":97,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 124
-
-{"jsonrpc":"2.0","id":98,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 168
-
-{"id":98,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
+<<< RECEIVED FROM IDE <<<
 Content-Length: 120
 
-{"jsonrpc":"2.0","id":99,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "id": 14,
+    "method": "textDocument/codeLens",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 791
+>>> SENT TO IDE >>>
+Content-Length: 37
 
-{"id":99,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":7,"character":19},"end":{"line":7,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":7,"character":19}]}},{"range":{"start":{"line":8,"character":12},"end":{"line":8,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
+{
+    "id": 14,
+    "result": [],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
 
-<<< IDE REQUEST <<<
-Content-Length: 132
+<<< RECEIVED FROM IDE <<<
+Content-Length: 192
 
-{"jsonrpc":"2.0","id":100,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didChange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt",
+            "version": 5
+        },
+        "contentChanges": [
+            {
+                "text": "PROGRAM main\n    \nEND PROGRAM main"
+            }
+        ]
+    }
+}
+--------------------------------------------------
 
->>> SERVER RESPONSE >>>
-Content-Length: 222
-
-{"id":100,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,4,0,0,1,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 311
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":29},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            true\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
+>>> SENT TO IDE >>>
 Content-Length: 122
 
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":101,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":101,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":102,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":102,"result":[{"startLine":4,"endLine":5,"kind":"region"},{"startLine":3,"endLine":6,"kind":"region"},{"startLine":0,"endLine":7,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 121
-
-{"jsonrpc":"2.0","id":103,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 792
-
-{"id":103,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":7,"character":19},"end":{"line":7,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":7,"character":19}]}},{"range":{"start":{"line":8,"character":12},"end":{"line":8,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 132
-
-{"jsonrpc":"2.0","id":104,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 222
-
-{"id":104,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,4,0,0,1,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 325
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":30},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            true\n            \n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":105,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":105,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":106,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":106,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 121
-
-{"jsonrpc":"2.0","id":107,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 792
-
-{"id":107,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":8,"character":19},"end":{"line":8,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":8,"character":19}]}},{"range":{"start":{"line":9,"character":12},"end":{"line":9,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 132
-
-{"jsonrpc":"2.0","id":108,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 222
-
-{"id":108,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,4,0,0,2,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 326
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":31},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            true\n            t\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 188
-
-{"jsonrpc":"2.0","id":109,"method":"textDocument/completion","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"},"position":{"line":6,"character":13},"context":{"triggerKind":1}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 1984
-
-{"id":109,"result":{"isIncomplete":false,"items":[{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"lpo","kind":6,"detail":"variable","insertText":"lpo"},{"label":"INTEGER","kind":3,"detail":"keyword","insertText":"INTEGER"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"THEN","kind":3,"detail":"keyword","insertText":"THEN"},{"label":"true","kind":6,"detail":"variable","insertText":"true"},{"label":"t","kind":6,"detail":"variable","insertText":"t"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"IF","kind":3,"detail":"keyword","insertText":"IF"},{"label":"name","kind":3,"detail":"subroutine","insertText":"name()"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"SUBROUTINE","kind":3,"detail":"keyword","insertText":"SUBROUTINE"},{"label":"main","kind":3,"detail":"program","insertText":"main"},{"label":"END","kind":3,"detail":"keyword","insertText":"END"},{"label":"PROGRAM","kind":3,"detail":"keyword","insertText":"PROGRAM"},{"label":"SUBROUTINE","kind":15,"detail":"Snippet: Subroutine Block","insertText":"SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}","insertTextFormat":2,"doc":"Defines a subroutine with mirrored naming."},{"label":"PROGRAM","kind":15,"detail":"Snippet: Program Block","insertText":"PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}","insertTextFormat":2,"doc":"Main entry point template."},{"label":"IF-THEN","kind":15,"detail":"Snippet: Logic Block","insertText":"IF ($1) THEN\n\t$2\nEND IF","insertTextFormat":2,"doc":"Standard IF-THEN-ENDIF structure."},{"label":"INTEGER","kind":6,"detail":"Data type","doc":"32-bit integer."},{"label":"REAL","kind":6,"detail":"Data type","doc":"Floating point number."}]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":110,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":110,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":111,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":111,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 121
-
-{"jsonrpc":"2.0","id":112,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 792
-
-{"id":112,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":8,"character":19},"end":{"line":8,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":8,"character":19}]}},{"range":{"start":{"line":9,"character":12},"end":{"line":9,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 132
-
-{"jsonrpc":"2.0","id":113,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 233
-
-{"id":113,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,4,0,0,1,12,1,0,0,1,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 329
-
-{"jsonrpc":"2.0","method":"textDocument/didChange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt","version":32},"contentChanges":[{"text":"PROGRAM main\n    INTEGER :: lpo\n\n    SUBROUTINE name()\n        IF () THEN\n            true\n            THEN\n        END IF\n    END SUBROUTINE name\nEND PROGRAM main"}]}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 122
-
-{"method":"textDocument/publishDiagnostics","params":{"uri":"file:///home/dharun/j.txt","diagnostics":[]},"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":114,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":114,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 125
-
-{"jsonrpc":"2.0","id":115,"method":"textDocument/foldingRange","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 169
-
-{"id":115,"result":[{"startLine":4,"endLine":6,"kind":"region"},{"startLine":3,"endLine":7,"kind":"region"},{"startLine":0,"endLine":8,"kind":"region"}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 121
-
-{"jsonrpc":"2.0","id":116,"method":"textDocument/codeLens","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 792
-
-{"id":116,"result":[{"range":{"start":{"line":0,"character":8},"end":{"line":0,"character":12}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}},{"range":{"start":{"line":3,"character":15},"end":{"line":3,"character":19}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":3,"character":15}]}},{"range":{"start":{"line":8,"character":19},"end":{"line":8,"character":23}},"command":{"title":"Go to name","command":"editor.action.showReferences","arguments":["file:///home/dharun/j.txt",{"line":8,"character":19}]}},{"range":{"start":{"line":9,"character":12},"end":{"line":9,"character":16}},"command":{"title":"\u25b6 Run Program","command":"fortran.run","arguments":[]}}],"jsonrpc":"2.0"}
-========================================
-
-<<< IDE REQUEST <<<
-Content-Length: 132
-
-{"jsonrpc":"2.0","id":117,"method":"textDocument/semanticTokens/full","params":{"textDocument":{"uri":"file:///home/dharun/j.txt"}}}
-========================================
-
->>> SERVER RESPONSE >>>
-Content-Length: 233
-
-{"id":117,"result":{"data":[0,0,7,2,0,0,8,4,1,0,1,4,7,2,0,0,11,3,0,0,2,4,10,2,0,0,11,4,1,0,1,8,2,2,0,0,6,4,2,0,1,12,4,0,0,1,12,4,2,0,1,8,3,2,0,0,4,2,2,0,1,4,3,2,0,0,4,10,2,0,0,11,4,1,0,1,0,3,2,0,0,4,7,2,0,0,8,4,1,0]},"jsonrpc":"2.0"}
-========================================
+{
+    "method": "textDocument/publishDiagnostics",
+    "params": {
+        "uri": "file:///home/dharun/j.txt",
+        "diagnostics": []
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 124
+
+{
+    "jsonrpc": "2.0",
+    "id": 15,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 80
+
+{
+    "id": 15,
+    "result": [
+        {
+            "startLine": 0,
+            "endLine": 1,
+            "kind": "region"
+        }
+    ],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 124
+
+{
+    "jsonrpc": "2.0",
+    "id": 16,
+    "method": "textDocument/foldingRange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 80
+
+{
+    "id": 16,
+    "result": [
+        {
+            "startLine": 0,
+            "endLine": 1,
+            "kind": "region"
+        }
+    ],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 120
+
+{
+    "jsonrpc": "2.0",
+    "id": 17,
+    "method": "textDocument/codeLens",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 351
+
+{
+    "id": 17,
+    "result": [
+        {
+            "range": {
+                "start": {
+                    "line": 0,
+                    "character": 8
+                },
+                "end": {
+                    "line": 0,
+                    "character": 12
+                }
+            },
+            "command": {
+                "title": "\u25b6 Run Program",
+                "command": "fortran.run",
+                "arguments": []
+            }
+        },
+        {
+            "range": {
+                "start": {
+                    "line": 2,
+                    "character": 12
+                },
+                "end": {
+                    "line": 2,
+                    "character": 16
+                }
+            },
+            "command": {
+                "title": "\u25b6 Run Program",
+                "command": "fortran.run",
+                "arguments": []
+            }
+        }
+    ],
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------
+
+<<< RECEIVED FROM IDE <<<
+Content-Length: 131
+
+{
+    "jsonrpc": "2.0",
+    "id": 18,
+    "method": "textDocument/semanticTokens/full",
+    "params": {
+        "textDocument": {
+            "uri": "file:///home/dharun/j.txt"
+        }
+    }
+}
+--------------------------------------------------
+
+>>> SENT TO IDE >>>
+Content-Length: 95
+
+{
+    "id": 18,
+    "result": {
+        "data": [
+            0,
+            0,
+            7,
+            2,
+            0,
+            0,
+            8,
+            4,
+            1,
+            0,
+            2,
+            0,
+            3,
+            2,
+            0,
+            0,
+            4,
+            7,
+            2,
+            0,
+            0,
+            8,
+            4,
+            1,
+            0
+        ]
+    },
+    "jsonrpc": "2.0"
+}
+--------------------------------------------------

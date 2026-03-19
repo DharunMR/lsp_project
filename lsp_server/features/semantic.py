@@ -5,21 +5,16 @@ def get_semantic_tokens(file_obj):
     last_line = 0
     last_col = 0
 
-    # 1. Sort symbols by line, then by column (This is exactly where it belongs)
-    # This ensures the deltas are never negative, which would crash the coloring.
     sorted_syms = sorted(file_obj.symbols, key=lambda x: (x.line, x.col))
 
     for sym in sorted_syms:
         delta_line = sym.line - last_line
         
         if delta_line > 0:
-            # New line: delta_start is the absolute column
             delta_start = sym.col
         else:
-            # Same line: delta_start is relative to the PREVIOUS token's START
             delta_start = sym.col - last_col
         
-        # Mapping to your legend: 0: variable (Blue), 1: function (Yellow), 2: keyword (Purple)
         if sym.kind in ['subroutine', 'function', 'program']:
             token_type = 1
         elif sym.kind in ['keyword']:
@@ -27,7 +22,6 @@ def get_semantic_tokens(file_obj):
         else:
             token_type = 0 
         
-        # We use len(sym.name) for the width of the highlight
         data.extend([
             delta_line, 
             delta_start, 
@@ -36,7 +30,6 @@ def get_semantic_tokens(file_obj):
             0 
         ])
         
-        # Update trackers
         last_line = sym.line
         last_col = sym.col
 

@@ -1,4 +1,4 @@
-from lsp_server.regex import FortranRegularExpressions as FRE
+from regex import FortranRegularExpressions as FRE
 import re
 
 class Symbol:
@@ -13,6 +13,7 @@ class FortranFile:
     def __init__(self, uri, text):
         self.uri = uri
         self.text = text
+        self.lines = text.splitlines()
         self.symbols = []
         self.parse()
 
@@ -26,30 +27,22 @@ class FortranFile:
         lines = self.text.splitlines()
 
         for i, line in enumerate(lines):
-            # 1. IDENTIFY STRUCTURE (Programs/Subroutines)
-            # PROG regex: r"[ ]*PROGRAM[ ]+(\w+)"
             prog_match = FRE.PROG.search(line)
             if prog_match:
-                # group(1) is the name 'main'
                 self.symbols.append(Symbol(prog_match.group(1), 'program', i, prog_match.start(1)))
 
             sub_match = FRE.SUB.search(line)
             if sub_match:
-                # Find signature if it exists, else default to "()"
                 sig_match = FRE.SUB_PAREN.search(line, sub_match.end())
                 sig = sig_match.group(0) if sig_match else "()"
                 self.symbols.append(Symbol(sub_match.group(1), 'subroutine', i, sub_match.start(1), sig))
 
-            # 2. IDENTIFY DECLARATIONS (INTEGER :: kop)
             var_match = FRE.VAR.search(line)
             if var_match:
-                # We look for the name after the type definition
                 name_match = FRE.WORD.search(line, var_match.end())
                 if name_match:
                     self.symbols.append(Symbol(name_match.group(0), 'variable', i, name_match.start()))
 
-            # 3. IDENTIFY KEYWORDS (IF, THEN, END IF, etc.)
-            # We use re.finditer to catch multiple keywords on one line (e.g., END IF)
             keyword_pattern = r"\b(IF|THEN|ELSE|END|PROGRAM|SUBROUTINE|INTEGER|DO)\b"
             for kw in re.finditer(keyword_pattern, line, re.IGNORECASE):
                 # Only add if this spot isn't already a Program or Subroutine name
