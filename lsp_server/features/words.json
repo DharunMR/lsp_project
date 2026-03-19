@@ -1,0 +1,30 @@
+{
+    "words": [
+        {
+            "label": "SUBROUTINE", 
+            "kind": 15, 
+            "detail": "Snippet: Subroutine Block", 
+            "insertText": "SUBROUTINE ${1:name}()\n\t$0\nEND SUBROUTINE ${1:name}",
+            "insertTextFormat": 2,
+            "doc": "Defines a subroutine with mirrored naming."
+        },
+        {
+            "label": "PROGRAM", 
+            "kind": 15, 
+            "detail": "Snippet: Program Block", 
+            "insertText": "PROGRAM ${1:main}\n\t$0\nEND PROGRAM ${1:main}",
+            "insertTextFormat": 2,
+            "doc": "Main entry point template."
+        },
+        {
+            "label": "IF-THEN", 
+            "kind": 15, 
+            "detail": "Snippet: Logic Block", 
+            "insertText": "IF ($1) THEN\n\t$2\nEND IF",
+            "insertTextFormat": 2,
+            "doc": "Standard IF-THEN-ENDIF structure."
+        },
+        {"label": "INTEGER", "kind": 6, "detail": "Data type", "doc": "32-bit integer."},
+        {"label": "REAL", "kind": 6, "detail": "Data type", "doc": "Floating point number."}
+    ]
+}
