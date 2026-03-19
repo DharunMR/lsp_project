@@ -1,11 +1,13 @@
+from lsp_server.regex import FortranRegularExpressions as FRE
 import re
 
 class Symbol:
-    def __init__(self, name, kind, line, col):
+    def __init__(self, name, kind, line, col, signature=""):
         self.name = name
         self.kind = kind  # 'program', 'subroutine', 'variable', 'keyword'
         self.line = line
         self.col = col
+        self.signature = signature
 
 class FortranFile:
     def __init__(self, uri, text):
@@ -15,46 +17,55 @@ class FortranFile:
         self.parse()
 
     def parse(self):
-        """Simple symbolic parser to populate the symbols list."""
+        """
+        Processes the file line-by-line to build a list of symbols.
+        Order of operations matters to prevent keywords from 'stealing' 
+        the coordinates of program or variable names.
+        """
         self.symbols = []
         lines = self.text.splitlines()
 
-        # 1. Define Regex Patterns
-        patterns = {
-            'program': r'^\s*PROGRAM\s+(\w+)',
-            'subroutine': r'^\s*SUBROUTINE\s+(\w+)',
-            'variable': r'^\s*(?:INTEGER|REAL|COMPLEX|LOGICAL|CHARACTER).*?::\s*(\w+)',
-            'keyword': r'\b(IF|THEN|ELSE|END|PROGRAM|SUBROUTINE|INTEGER|REAL|DO|WHILE|RETURN)\b'
-        }
-
         for i, line in enumerate(lines):
-            # Check for structural blocks (Program/Subroutine)
-            for kind in ['program', 'subroutine']:
-                match = re.search(patterns[kind], line, re.IGNORECASE)
-                if match:
-                    self.symbols.append(Symbol(match.group(1), kind, i, match.start(1)))
+            # 1. IDENTIFY STRUCTURE (Programs/Subroutines)
+            # PROG regex: r"[ ]*PROGRAM[ ]+(\w+)"
+            prog_match = FRE.PROG.search(line)
+            if prog_match:
+                # group(1) is the name 'main'
+                self.symbols.append(Symbol(prog_match.group(1), 'program', i, prog_match.start(1)))
 
-            # Check for Variable Declarations (INTEGER :: jk)
-            var_match = re.search(patterns['variable'], line, re.IGNORECASE)
+            sub_match = FRE.SUB.search(line)
+            if sub_match:
+                # Find signature if it exists, else default to "()"
+                sig_match = FRE.SUB_PAREN.search(line, sub_match.end())
+                sig = sig_match.group(0) if sig_match else "()"
+                self.symbols.append(Symbol(sub_match.group(1), 'subroutine', i, sub_match.start(1), sig))
+
+            # 2. IDENTIFY DECLARATIONS (INTEGER :: kop)
+            var_match = FRE.VAR.search(line)
             if var_match:
-                self.symbols.append(Symbol(var_match.group(1), 'variable', i, var_match.start(1)))
+                # We look for the name after the type definition
+                name_match = FRE.WORD.search(line, var_match.end())
+                if name_match:
+                    self.symbols.append(Symbol(name_match.group(0), 'variable', i, name_match.start()))
 
-            # Check for Keywords (to fix the "white text" problem)
-            # We find all keywords and add them as symbols so semantic.py can color them
-            for kw_match in re.finditer(patterns['keyword'], line, re.IGNORECASE):
-                # We only add it if it's not already part of a structural match
-                self.symbols.append(Symbol(kw_match.group(0), 'keyword', i, kw_match.start()))
+            # 3. IDENTIFY KEYWORDS (IF, THEN, END IF, etc.)
+            # We use re.finditer to catch multiple keywords on one line (e.g., END IF)
+            keyword_pattern = r"\b(IF|THEN|ELSE|END|PROGRAM|SUBROUTINE|INTEGER|DO)\b"
+            for kw in re.finditer(keyword_pattern, line, re.IGNORECASE):
+                # Only add if this spot isn't already a Program or Subroutine name
+                if not any(s.line == i and s.col == kw.start() for s in self.symbols):
+                    self.symbols.append(Symbol(kw.group(0), 'keyword', i, kw.start()))
 
-            # Catch usage of variables (very basic logic)
-            # This finds 'jk' or 'fghj' when used in assignments or IF statements
-            words = re.finditer(r'\b[a-zA-Z_]\w*\b', line)
-            for w in words:
-                name = w.group(0)
-                # If it's not a keyword and not already found, treat it as a variable usage
-                if not re.match(patterns['keyword'], name, re.IGNORECASE):
-                    # Only add if not already in symbols for this line
-                    if not any(s.line == i and s.col == w.start() for s in self.symbols):
-                        self.symbols.append(Symbol(name, 'variable', i, w.start()))
+            # 4. IDENTIFY USAGE (Words that aren't keywords or names yet)
+            # This catches 'fghj' or 'joke' in your example
+            for word_match in FRE.WORD.finditer(line):
+                word = word_match.group(0)
+                # Ignore numbers and booleans
+                if FRE.NUMBER.match(word) or FRE.LOGICAL.match(word):
+                    continue
+                # If the coordinate is empty, it's a variable usage
+                if not any(s.line == i and s.col == word_match.start() for s in self.symbols):
+                    self.symbols.append(Symbol(word, 'variable', i, word_match.start()))
 
 class WorkspaceManager:
     def __init__(self):
