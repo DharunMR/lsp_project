@@ -8,7 +8,7 @@ Content-Length: 5744
     "id": 0,
     "method": "initialize",
     "params": {
-        "processId": 30064,
+        "processId": 31086,
         "clientInfo": {
             "name": "Code - OSS",
             "version": "1.111.0"
@@ -536,20 +536,4 @@ Content-Length: 521
 }
 --------------------------------------------------
 
-!!! CRASH !!!
-Traceback (most recent call last):
-  File "/home/dharun/Projects/lsp_demo/lsp_server/main.py", line 75, in serve
-    self.send({"id": rid, "result": {"capabilities": {
-    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        "textDocumentSync": 1,
-        ^^^^^^^^^^^^^^^^^^^^^^
-    ...<14 lines>...
-        }
-        ^
-    }}})
-    ^^^^
-  File "/home/dharun/Projects/lsp_demo/lsp_server/main.py", line 45, in send
-    sys.stdout.buffer.write(header.encode("ascii"))
-    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-BrokenPipeError: [Errno 32] Broken pipe
 
