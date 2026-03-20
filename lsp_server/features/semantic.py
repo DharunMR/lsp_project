@@ -1,68 +1,81 @@
+from typing import Dict, List, Any
 import re
 
-def get_semantic_tokens(file_obj):
+TOKEN_TYPES = [
+    "variable",   
+    "function",   
+    "keyword",    
+    "string",     
+    "number",     
+    "comment",    
+    "type",       
+    "operator",   
+]
+
+KIND_TO_ID: Dict[str, int] = {
+    'variable': 0,
+    'program': 1,      
+    'subroutine': 1,  
+    'keyword': 2,
+    'string': 3,
+    'number': 4,
+    'comment': 5,
+    'type': 6,
+    'operator':7,
+}
+
+def get_semantic_tokens(file_obj) -> Dict[str, List[int]]:
     data = []
     last_line = 0
     last_col = 0
 
-    sorted_syms = sorted(file_obj.symbols, key=lambda x: (x.line, x.col))
+    sorted_syms = sorted(file_obj.symbols, key=lambda s: (s.line, s.col))
 
     for sym in sorted_syms:
+        token_type = KIND_TO_ID.get(sym.kind, 0)
+        token_modifiers = 0 
+
         delta_line = sym.line - last_line
-        
         if delta_line > 0:
             delta_start = sym.col
         else:
             delta_start = sym.col - last_col
-        
-        if sym.kind in ['subroutine', 'function', 'program']:
-            token_type = 1
-        elif sym.kind in ['keyword']:
-            token_type = 2
-        else:
-            token_type = 0 
-        
+
         data.extend([
-            delta_line, 
-            delta_start, 
-            len(sym.name), 
-            token_type, 
-            0 
+            delta_line,               
+            delta_start,              
+            len(sym.name),            
+            token_type,               
+            token_modifiers
         ])
-        
+
         last_line = sym.line
         last_col = sym.col
 
     return {"data": data}
 
 def get_document_highlights(file_obj, line, char):
-    """Highlights all occurrences of the variable under cursor accurately."""
-    lines = file_obj.text.splitlines()
-    if line >= len(lines): 
+    if not file_obj or not file_obj.symbols:
         return []
-    
-    current_line = lines[line]
-    
-    # IMPROVED: Find the specific word EXACTLY under the cursor
-    # Instead of slicing -20/+20, we find all words and see which one contains 'char'
-    target_word = None
-    for m in re.finditer(r'\b\w+\b', current_line):
-        if m.start() <= char <= m.end():
-            target_word = m.group(0)
+
+    target_symbol = None
+    for sym in file_obj.symbols:
+        if sym.line == line and sym.col <= char <= (sym.col + len(sym.name)):
+            target_symbol = sym
             break
             
-    if not target_word: 
+    if not target_symbol: 
         return []
 
     highlights = []
-    for i, l in enumerate(lines):
-        # Find every instance of that specific word in the whole file
-        for m in re.finditer(rf'\b{target_word}\b', l):
+    for s in file_obj.symbols:
+        if s.name == target_symbol.name and s.kind == target_symbol.kind:
             highlights.append({
                 "range": {
-                    "start": {"line": i, "character": m.start()},
-                    "end": {"line": i, "character": m.end()}
+                    "start": {"line": s.line, "character": s.col},
+                    "end": {"line": s.line, "character": s.col + len(s.name)}
                 },
-                "kind": 1 # 1 = Read access highlight
+                "kind": 1
             })
+            
     return highlights

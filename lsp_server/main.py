@@ -7,7 +7,8 @@ import traceback
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from manager import WorkspaceManager
-from features import completion, hover, semantic, folding
+from features import completion, hover, semantic, folding, codeLens
+from features.semantic import TOKEN_TYPES
 
 logging.basicConfig(filename='lsp.log', level=logging.DEBUG, filemode='w')
 logger = logging.getLogger("LSP")
@@ -21,7 +22,6 @@ class LanguageServer:
             f.write("=== PRETTIFIED LSP SESSION ===\n")
 
     def log_prettier_rpc(self, direction, header, body_dict):
-        """Logs a readable, indented version of the JSON-RPC traffic."""
         try:
             pretty_json = json.dumps(body_dict, indent=4)
             with open(RAW_RPC_FILE, "a", encoding="utf-8") as f:
@@ -33,7 +33,6 @@ class LanguageServer:
             logger.error(f"Logging failed: {e}")
 
     def send(self, data):
-        """Sends compact JSON to IDE, but logs pretty JSON to file."""
         data["jsonrpc"] = "2.0" 
         
         compact_json = json.dumps(data, separators=(",", ":"))
@@ -84,7 +83,10 @@ class LanguageServer:
                             "foldingRangeProvider": True,
                             "documentHighlightProvider": True,
                             "semanticTokensProvider": {
-                                "legend": {"tokenTypes": ["variable", "function", "keyword"], "tokenModifiers": []},
+                                "legend": {
+                                    "tokenTypes": TOKEN_TYPES,
+                                    "tokenModifiers": []
+                                },
                                 "full": True
                             }
                         }}})
@@ -112,7 +114,7 @@ class LanguageServer:
                         "textDocument/declaration": lambda: hover.get_definition(doc, l, c),
                         "textDocument/signatureHelp": lambda: hover.get_signature_help(doc, l, c),
                         "textDocument/documentHighlight": lambda: semantic.get_document_highlights(doc, l, c),
-                        "textDocument/codeLens": lambda: folding.get_code_lens(doc),
+                        "textDocument/codeLens": lambda: codeLens.get_code_lens(doc),
                         "textDocument/foldingRange": lambda: folding.get_folding_ranges(doc),
                         "textDocument/semanticTokens/full": lambda: semantic.get_semantic_tokens(doc),
                     }

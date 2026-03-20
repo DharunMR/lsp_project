@@ -3,10 +3,9 @@ const { LanguageClient } = require('vscode-languageclient/node');
 function activate(context) {
     const serverOptions = {
         command: 'python3', 
-        // '-u' ensures the output is unbuffered so the LSP messages send instantly
         args: ['-u', '-m', 'lsp_server.main'],
         options: {
-            cwd: context.extensionPath // This tells Python to look in the project root
+            cwd: context.extensionPath
         }
     };
 

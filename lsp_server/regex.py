@@ -1,3 +1,4 @@
+# Took this code from fortls repo https://github.com/fortran-lang/fortls/blob/master/fortls/regex_patterns.py
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -158,61 +159,3 @@ class FortranRegularExpressions:
     CLASS_VAR: Pattern = compile(r"(TYPE|CLASS)[ ]*\(", I)
     DEF_KIND: Pattern = compile(r"(\w*)[ ]*\((?:KIND|LEN)?[ =]*(\w*)", I)
     OBJBREAK: Pattern = compile(r"[\/\-(.,+*<>=: ]", I)
-
-
-# TODO: use this in the main code
-def create_src_file_exts_regex(input_exts: list[str] = []) -> Pattern[str]:
-    r"""Create a REGEX for which sources the Language Server should parse.
-
-    Default extensions are (case insensitive):
-    F F03 F05 F08 F18 F77 F90 F95 FOR FPP
-
-    Parameters
-    ----------
-    input_exts : list[str], optional
-        Additional list of file extensions to parse, in Python REGEX format
-        that means special characters must be escaped
-        , by default []
-
-    Examples
-    --------
-    >>> regex = create_src_file_exts_regex([r"\.fypp", r"\.inc"])
-    >>> regex.search("test.fypp")
-    <re.Match object; span=(4, 9), match='.fypp'>
-    >>> regex.search("test.inc")
-    <re.Match object; span=(4, 8), match='.inc'>
-
-    >>> regex = create_src_file_exts_regex([r"\.inc.*"])
-    >>> regex.search("test.inc.1")
-    <re.Match object; span=(4, 10), match='.inc.1'>
-
-    Invalid regex expressions will cause the function to revert to the default
-    extensions
-
-    >>> regex = create_src_file_exts_regex(["*.inc"])
-    >>> regex.search("test.inc") is None
-    True
-
-    Returns
-    -------
-    Pattern[str]
-        A compiled regular expression for matching file extensions
-    """
-    import re
-
-    DEFAULT = r"\.[fF](77|90|95|03|05|08|18|[oO][rR]|[pP]{2})?"
-    EXPRESSIONS = [DEFAULT]
-    try:
-        EXPRESSIONS.extend(input_exts)
-        # Add its expression as an OR and force they match the end of the string
-        return re.compile(rf"(({'$)|('.join(EXPRESSIONS)}$))")
-    except re.error:
-        # TODO: Add a warning to the logger
-        return re.compile(rf"({DEFAULT}$)")
-
-
-def create_src_file_exts_str(input_exts: list[str] = []) -> Pattern[str]:
-    import re
-
-    input_exts = [re.escape(ext) for ext in input_exts]
-    return create_src_file_exts_regex(input_exts)
